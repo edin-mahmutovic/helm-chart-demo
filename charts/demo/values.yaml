@@ -4,6 +4,8 @@
 
 replicaCount: 1
 
+hello: world
+
 image:
   repository: nginx
   pullPolicy: IfNotPresent
