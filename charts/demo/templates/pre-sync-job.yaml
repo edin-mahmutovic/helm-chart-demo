@@ -4,8 +4,8 @@ kind: Job
 metadata:
   name: {{ include "..fullname" . }}-pre-sync-job
   annotations:
-    argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    helm.sh/hook: pre-install
+    helm.sh/hook-delete-policy: hook-succeeded
 spec:
   template:
     spec:
