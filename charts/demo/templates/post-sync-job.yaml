@@ -1,3 +1,4 @@
+{{- if .Values.syncJob.postSyncEnabled -}}
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -14,3 +15,4 @@ spec:
         command: ["sleep", "10"]
       restartPolicy: Never
   backoffLimit: 0
+{{- end }}
