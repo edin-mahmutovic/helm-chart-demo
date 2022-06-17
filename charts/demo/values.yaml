@@ -67,9 +67,9 @@ tolerations: []
 
 affinity: {}
 
-sync-job:
-  pre-sync-enabled: true
-  post-sync-enabled: true
+syncJob:
+  preSyncEnabled: true
+  postSyncEnabled: true
 
 livenessProbe:
   httpGet:

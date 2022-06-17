@@ -1,8 +1,8 @@
-{{- if .Values.sync-job.pre-sync-enabled -}}
+{{- if .Values.syncJob.preSyncEnabled -}}
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ include "..fullname" . }}
+  name: {{ include "..fullname" . }}-pre-sync-job
   annotations:
     argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
@@ -15,3 +15,4 @@ spec:
         command: ["sleep", "10"]
       restartPolicy: Never
   backoffLimit: 0
+{{- end }}
