@@ -37,15 +37,15 @@ spec:
               protocol: TCP
           env:
           - name: "POSTGRES_HOST"
-            value: {{ .Values.postgres.host }}
+            value: "{{ .Values.postgres.host }}"
           - name: "POSTGRES_PORT"
-            value: {{ .Values.postgres.port }}
+            value: "{{ .Values.postgres.port }}"
           - name: "POSTGRES_DATABASE"
-            value: {{ .Values.postgres.database }}
+            value: "{{ .Values.postgres.database }}"
           - name: "POSTGRES_USERNAME"
-            value: {{ .Values.postgres.username }}
+            value: "{{ .Values.postgres.username }}"
           - name: "POSTGRES_PASSWORD"
-            value: {{ .Values.postgres.password }}
+            value: "{{ .Values.postgres.password }}"
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
