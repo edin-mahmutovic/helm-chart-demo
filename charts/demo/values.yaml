@@ -80,3 +80,10 @@ readinessProbe:
   httpGet:
     path: /
     port: http
+
+postgres:
+  host: postresql
+  port: 5432
+  database: postgres
+  username: postgres
+  password: postgres123
