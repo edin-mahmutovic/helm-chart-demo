@@ -46,6 +46,8 @@ spec:
               value: "{{ .Values.postgres.username }}"
             - name: "POSTGRES_PASSWORD"
               value: "{{ .Values.postgres.password }}"
+            - name: "KAFKA_BROKERS"
+              value: "{{ .Values.kafka.brokers }}"
             - name: "SPRING_PROFILES_ACTIVE"
               value: "{{ .Values.environment }}"
           livenessProbe:

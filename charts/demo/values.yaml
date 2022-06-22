@@ -85,3 +85,6 @@ postgres:
   database: postgres
   username: postgres
   password: postgres123
+
+kafka:
+  brokers: kafka
