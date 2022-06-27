@@ -9,15 +9,12 @@ spec:
   selector:
     matchLabels:
       app: {{ include "..fullname" . }}
-      {{- include "..selectorLabels" . | nindent 6 }}
   template:
-    metadata:
-      labels:
-        app: {{ include "..fullname" . }}
+    metadata:      
       annotations:
         {{- toYaml . | nindent 8 }}
       labels:
-        {{- include "..selectorLabels" . | nindent 8 }}
+        app: {{ include "..fullname" . }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
