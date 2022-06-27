@@ -16,7 +16,6 @@ spec:
         app: {{ include "..fullname" . }}
       annotations:
         {{- toYaml . | nindent 8 }}
-      {{- end }}
       labels:
         {{- include "..selectorLabels" . | nindent 8 }}
     spec:
