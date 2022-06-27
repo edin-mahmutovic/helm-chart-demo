@@ -8,10 +8,12 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
+      app: {{ include "..fullname" . }}
       {{- include "..selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
+      labels:
+        app: {{ include "..fullname" . }}
       annotations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
