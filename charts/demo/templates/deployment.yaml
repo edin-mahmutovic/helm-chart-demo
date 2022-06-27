@@ -8,7 +8,7 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "..selectorLabels" . | nindent 6 }}
+      app: {{ include "..fullname" . }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -16,7 +16,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "..selectorLabels" . | nindent 8 }}
+        app: {{ include "..fullname" . }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
