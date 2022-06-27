@@ -8,13 +8,15 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "..fullname" . }}
+      {{- include "..selectorLabels" . | nindent 6 }}
   template:
-    metadata:      
+    metadata:
+      {{- with .Values.podAnnotations }}
       annotations:
         {{- toYaml . | nindent 8 }}
+      {{- end }}
       labels:
-        app: {{ include "..fullname" . }}
+        {{- include "..selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
