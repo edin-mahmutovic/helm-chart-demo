@@ -17,7 +17,7 @@ spec:
       {{- end }}
       labels:
         app: {{ include "..fullname" . }}
-        sidecar.istio.io/inject: {{ .Values.istio.inject }}
+        sidecar.istio.io/inject: "{{ .Values.istio.inject }}"
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:

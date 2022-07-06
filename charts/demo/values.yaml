@@ -93,4 +93,4 @@ kafka:
   brokers: kafka
 
 istio:
-  inject: "true"
+  inject: true
