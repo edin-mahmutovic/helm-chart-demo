@@ -92,4 +92,5 @@ postgres:
 kafka:
   brokers: kafka
 
-istioInjection: "enabled"
+istio:
+  inject: true
