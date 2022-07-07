@@ -77,4 +77,6 @@ spec:
       - analysis:
           templates:
           - templateName: success-rate
-
+          args:
+          - name: service-name
+            value: biometrics-service.processing-mvp.svc.cluster.local
