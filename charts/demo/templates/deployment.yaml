@@ -51,6 +51,11 @@ spec:
               value: "{{ .Values.kafka.brokers }}"
             - name: "SPRING_PROFILES_ACTIVE"
               value: "{{ .Values.environment }}"
+            - name: AWS_SECRET_KEY 
+              valueFrom: 
+                secretKeyRef: 
+                  name: {{ include "..fullname" . }} 
+                  key: aws-secret-key 
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:

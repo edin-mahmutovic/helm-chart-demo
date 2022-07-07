@@ -94,3 +94,6 @@ kafka:
 
 istio:
   inject: true
+
+aws:
+  secretKey: c2VjcmV0S2V5
