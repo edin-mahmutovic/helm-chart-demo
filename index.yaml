@@ -3,7 +3,17 @@ entries:
   demo:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-07-12T14:28:45.948009+02:00"
+    created: "2022-08-18T19:46:16.657637+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 261e80ab6a55cfb3836d09d5cd44b54136533b6d02153af201bd5c930d80dc0e
+    name: demo
+    type: application
+    urls:
+    - https://edin-mahmutovic.github.io/helm-chart-demo/demo-4.1.2.tgz
+    version: 4.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-18T19:46:16.657282+02:00"
     description: A Helm chart for Kubernetes
     digest: 7ca06b0bfd86a7f5cceebd19b3699ebb4353dcbf14ce8b1fbe4f4a5b5a1219f2
     name: demo
@@ -13,7 +23,7 @@ entries:
     version: 4.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-07-12T14:28:45.947572+02:00"
+    created: "2022-08-18T19:46:16.65693+02:00"
     description: A Helm chart for Kubernetes
     digest: 3c171ae92999d17cfc8eeb397196193726efc1f8fca0ab98c25b0218d21c4b06
     name: demo
@@ -23,7 +33,7 @@ entries:
     version: 4.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-07-12T14:28:45.947121+02:00"
+    created: "2022-08-18T19:46:16.656513+02:00"
     description: A Helm chart for Kubernetes
     digest: 1c6a7c2ed50874a769179a3ad5c63a5ffc923c3ab8bb8433dea79b1cd7995cf5
     name: demo
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://edin-mahmutovic.github.io/helm-chart-demo/demo-4.0.10.tgz
     version: 4.0.10
-generated: "2022-07-12T14:28:45.946556+02:00"
+generated: "2022-08-18T19:46:16.655983+02:00"

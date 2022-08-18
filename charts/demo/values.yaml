@@ -1,6 +1,6 @@
 environment: default 
 
-replicaCount: 1
+replicaCount: 5
 
 image:
   repository: nginx
